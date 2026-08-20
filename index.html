@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login | Virtualization Cat Lab</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form id="authForm">
+		<h1 id="formTitle">Login</h1>
+		<p class="subtitle" id="formSubtitle">Welcome back. Sign in to continue.</p>
+		<input id="username" type="text" placeholder="Username" required>
+		<input id="email" type="email" placeholder="Email address" autocomplete="email" hidden>
+		<input id="password" type="password" placeholder="Password" required>
+		<input id="confirmPassword" type="password" placeholder="Confirm password" autocomplete="new-password" hidden>
+		<button type="submit">Log in</button>
+		<p id="message"></p>
+		<p class="switch-prompt" id="switchPrompt">New here? <button class="link-button" id="switchMode" type="button">Create an account</button></p>
+	</form>
+	<script src="script.js"></script>
+</body>
+</html>

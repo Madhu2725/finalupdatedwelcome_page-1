@@ -1,0 +1,74 @@
+body {
+	display: grid;
+	min-height: 100vh;
+	margin: 0;
+	place-items: center;
+	font-family: Arial, sans-serif;
+	background: #e8f1ff;
+}
+
+form {
+	display: grid;
+	gap: 12px;
+	width: min(320px, 90%);
+	padding: 24px;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 16px #0002;
+}
+
+h1, p { margin: 0; text-align: center; }
+h1 { color: #172033; }
+.subtitle { color: #667085; font-size: 0.92rem; }
+input, button { padding: 10px; font-size: 1rem; }
+input { border: 1px solid #d0d5dd; border-radius: 5px; }
+input:focus { outline: 2px solid #93c5fd; border-color: #2563eb; }
+button[type="submit"] { color: white; border: 0; border-radius: 5px; background: #2563eb; cursor: pointer; }
+button[type="submit"]:hover { background: #1d4ed8; }
+.switch-prompt, #message { font-size: 0.9rem; }
+.link-button { padding: 0; color: #2563eb; border: 0; background: transparent; cursor: pointer; }
+.link-button:hover { text-decoration: underline; }
+.success { color: #15803d; }
+.error { color: #b42318; }
+[hidden] { display: none; }
+
+/* Welcome page */
+.welcome-shell {
+	box-sizing: border-box;
+	width: min(1120px, 92%);
+	margin: 0 auto;
+	padding: 26px 0 52px;
+}
+.topbar { display: flex; align-items: center; justify-content: space-between; }
+.brand { color: #172033; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.08em; text-decoration: none; text-transform: uppercase; }
+.brand-mark { display: inline-grid; width: 31px; height: 31px; margin-right: 8px; place-items: center; border-radius: 10px; background: #172033; font-size: 1rem; vertical-align: middle; }
+.logout-button { padding: 9px 14px; color: #172033; border: 1px solid #d5d8d2; border-radius: 99px; background: transparent; cursor: pointer; font: inherit; font-size: 0.78rem; font-weight: 700; }
+.logout-button span { margin-left: 6px; font-size: 1rem; }
+.logout-button:hover { border-color: #172033; background: #fff; }
+.welcome-hero { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; min-height: 420px; border-bottom: 1px solid #d9ddd5; }
+.eyebrow { margin: 0 0 16px; color: #ef684f; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
+.status-dot { display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: #43a875; box-shadow: 0 0 0 4px #43a87524; vertical-align: 1px; }
+.welcome-hero h1 { max-width: 620px; text-align: left; color: #172033; font-family: Georgia, serif; font-size: clamp(3.3rem, 7vw, 6.2rem); font-weight: 400; letter-spacing: -0.06em; line-height: 0.92; }
+.welcome-hero h1 span { color: #ef684f; }
+.hero-subtitle { max-width: 410px; margin: 22px 0 28px; color: #697269; font-size: 1rem; line-height: 1.65; text-align: left; }
+.hero-actions { display: flex; align-items: center; gap: 20px; }
+.primary-action { padding: 13px 18px; color: #fff; border-radius: 6px; background: #172033; box-shadow: 4px 4px 0 #ef684f; font-size: 0.86rem; font-weight: 700; text-decoration: none; }
+.primary-action span { margin-left: 18px; font-size: 1.1rem; }
+.primary-action:hover { transform: translate(-1px, -1px); }
+.session-note { color: #8a9189; font-size: 0.75rem; }
+.session-note strong { color: #43a875; }
+.cat-orbit { position: relative; width: min(360px, 80vw); height: 320px; margin: 0 auto; }
+.orbit-ring { position: absolute; inset: 8%; border: 1px solid #d3d8ce; border-radius: 50%; transform: rotate(-24deg) scaleY(0.48); }
+.orbit-ring-one { border-color: #ef684f88; transform: rotate(-30deg) scaleY(0.5); }
+.orbit-ring-two { inset: 19% 1%; border-color: #e5b84b88; transform: rotate(55deg) scaleY(0.65); }
+.cat-badge { position: absolute; top: 50%; left: 50%; display: grid; width: 132px; height: 132px; place-items: center; border: 10px solid #fff; border-radius: 50%; background: #f5c457; box-shadow: 0 18px 35px #17203322; font-size: 4.5rem; transform: translate(-50%, -50%); }
+.orbit-label { position: absolute; display: grid; width: 42px; height: 42px; place-items: center; border-radius: 50%; background: #fff; color: #172033; font-size: 0.65rem; font-weight: 800; box-shadow: 0 5px 20px #17203314; }
+.label-one { top: 21%; right: 10%; color: #ef684f; }.label-two { bottom: 17%; left: 9%; color: #43a875; }
+.lab-section { padding-top: 42px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 20px; }
+.section-heading .eyebrow { margin-bottom: 7px; color: #8a9189; }.section-heading h2 { color: #172033; font-family: Georgia, serif; font-size: 2rem; font-weight: 400; text-align: left; }.section-count { color: #8a9189; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.pathway-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.pathway-card { position: relative; min-height: 208px; padding: 22px; border-radius: 7px; color: #172033; text-decoration: none; transition: transform 180ms ease, box-shadow 180ms ease; }
+.pathway-card:hover { box-shadow: 7px 7px 0 #172033; transform: translateY(-4px); }.pathway-card-coral { background: #ef684f; }.pathway-card-yellow { background: #f5c457; }.pathway-card-mint { background: #9bcbb5; }
+.card-number { font-size: 0.7rem; font-weight: 800; }.card-icon { position: absolute; top: 18px; right: 22px; font-size: 2rem; }.pathway-card h3 { max-width: 170px; margin: 52px 0 10px; font-family: Georgia, serif; font-size: 1.55rem; font-weight: 400; line-height: 1; text-align: left; }.pathway-card p { max-width: 210px; margin: 0; color: #172033cc; font-size: 0.82rem; line-height: 1.45; text-align: left; }.card-arrow { position: absolute; right: 22px; bottom: 20px; font-size: 1.35rem; }
+@media (max-width: 700px) { .welcome-shell { width: 88%; padding-top: 20px; }.welcome-hero { grid-template-columns: 1fr; min-height: auto; padding: 70px 0 34px; }.welcome-hero h1 { font-size: clamp(3.2rem, 16vw, 5rem); }.cat-orbit { height: 260px; margin-top: 28px; }.cat-badge { width: 100px; height: 100px; font-size: 3.4rem; }.section-heading { align-items: start; flex-direction: column; gap: 10px; }.pathway-grid { grid-template-columns: 1fr; }.pathway-card { min-height: 150px; }.pathway-card h3 { margin-top: 32px; }.hero-actions { align-items: start; flex-direction: column; gap: 16px; } }

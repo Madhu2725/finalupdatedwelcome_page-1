@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome | Virtualization Cat Lab</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="welcome-shell">
+		<nav class="topbar" aria-label="Primary navigation">
+			<a class="brand" href="welcome.html"><span class="brand-mark" aria-hidden="true">🐈</span> Virtualization Cat Lab</a>
+			<button class="logout-button" id="logoutButton" type="button">Log out <span aria-hidden="true">↗</span></button>
+		</nav>
+
+		<section class="welcome-hero" aria-labelledby="welcomeTitle">
+			<div class="hero-copy">
+				<p class="eyebrow"><span class="status-dot"></span> Lab access confirmed</p>
+				<h1 id="welcomeTitle">Welcome back,<br><span id="welcomeUsername">friend</span>.</h1>
+				<p class="hero-subtitle">Your private workspace is ready. Pick a path and start experimenting with virtual worlds.</p>
+				<div class="hero-actions">
+					<a class="primary-action" href="#explore">Explore the lab <span aria-hidden="true">→</span></a>
+					<span class="session-note">Session active <strong>•</strong> just now</span>
+				</div>
+			</div>
+			<div class="cat-orbit" aria-hidden="true">
+				<div class="orbit-ring orbit-ring-one"></div>
+				<div class="orbit-ring orbit-ring-two"></div>
+				<div class="cat-badge">🐈</div>
+				<span class="orbit-label label-one">01</span>
+				<span class="orbit-label label-two">LAB</span>
+			</div>
+		</section>
+
+		<section class="lab-section" id="explore" aria-labelledby="exploreTitle">
+			<div class="section-heading">
+				<div><p class="eyebrow">Your launchpad</p><h2 id="exploreTitle">Where will you go first?</h2></div>
+				<span class="section-count">03 pathways</span>
+			</div>
+			<div class="pathway-grid">
+				<a class="pathway-card pathway-card-coral" href="#simulator"><span class="card-number">01</span><span class="card-icon">◌</span><h3>Build a simulation</h3><p>Shape a small virtual system and watch it come alive.</p><span class="card-arrow" aria-hidden="true">↗</span></a>
+				<a class="pathway-card pathway-card-yellow" href="#playground"><span class="card-number">02</span><span class="card-icon">✦</span><h3>Open the playground</h3><p>Try ideas freely in a space made for curious minds.</p><span class="card-arrow" aria-hidden="true">↗</span></a>
+				<a class="pathway-card pathway-card-mint" href="#library"><span class="card-number">03</span><span class="card-icon">⌁</span><h3>Browse the library</h3><p>Find notes, patterns, and tiny discoveries from the lab.</p><span class="card-arrow" aria-hidden="true">↗</span></a>
+			</div>
+		</section>
+	</main>
+	<script>
+		const currentUser = localStorage.getItem('virtualizationCatLabCurrentUser');
+		if (!currentUser) {
+			window.location.href = 'index.html';
+		} else {
+			document.getElementById('welcomeUsername').textContent = currentUser;
+		}
+
+		document.getElementById('logoutButton').addEventListener('click', function () {
+			localStorage.removeItem('virtualizationCatLabCurrentUser');
+			window.location.href = 'index.html';
+		});
+	</script>
+</body>
+</html>
